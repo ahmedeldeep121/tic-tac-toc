@@ -52,8 +52,7 @@ def ids_ai_move(board, player, max_depth=None):
 
     empty = [(r, c) for r in range(3) for c in range(3) if board[r][c] == ""]
     return random.choice(empty) if empty else None
-
-# =================== Game State ===================
+ 
 players = ["x", "o"]
 player = random.choice(players)
 ai_player = "o"
@@ -62,7 +61,6 @@ ai_vs_ai = False
 current_mode = "pvp"
 game_buttons = []
 
-# =================== Core Game Functions ===================
 def available_moves():
     return [(r, c) for r in range(3) for c in range(3) if game_buttons[r][c]["text"] == ""]
 
@@ -188,7 +186,6 @@ def init_game_window():
 
     window.mainloop()
 
-# =================== Mode Selection Window ===================
 select_window = Tk()
 select_window.title("Select Game Mode")
 select_window.configure(bg="#f0f0f0")
